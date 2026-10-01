@@ -1,5 +1,17 @@
 import streamlit as st
 
+# --- HIDE STREAMLIT HEADER & GITHUB ICONS ---
+hide_streamlit_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    div[data-testid="stToolbar"] {display: none !important;}
+    div[data-testid="stDecoration"] {display: none !important;}
+    </style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
 # Page configuration
 st.set_page_config(
     page_title="LionGaze Product Presentation", page_icon="🦁", layout="wide"
