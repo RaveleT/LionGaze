@@ -10,3 +10,9 @@ showErrorDetails = true
 
 [ui]
 hideTopBar = false
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false
