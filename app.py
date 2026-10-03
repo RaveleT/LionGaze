@@ -10,6 +10,41 @@ st.set_page_config(
     page_title="LionGaze Product Presentation", page_icon="🦁", layout="wide"
 )
 
+st.markdown(
+    """
+    <style>
+        /* Improve contrast for muted text, small labels, and captions */
+        p, span, label, .streamlit-expanderHeader, [data-testid="stMetricLabel"] {
+            color: #E2E8F0 !important;
+        }
+        
+        /* Specific boost for secondary/muted metadata headers */
+        .muted-label, small, [data-testid="stCaptionContainer"] {
+            color: #94A3B8 !important;
+        }
+
+        /* Ensure metric values stand out brightly */
+        [data-testid="stMetricValue"] {
+            color: #F8FAFC !important;
+        }
+
+        /* Fix button text contrast inside custom buttons */
+        div.stButton > button {
+            color: #0F172A !important;
+            background-color: #38BDF8 !important;
+            font-weight: 600;
+            border: none;
+        }
+        
+        div.stButton > button:hover {
+            background-color: #0EA5E9 !important;
+            color: #FFFFFF !important;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
 # CSS Footer and Header Remover Injection + Dark Theme Enforcement
 hide_streamlit_style = """
     <style>
