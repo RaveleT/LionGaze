@@ -9262,6 +9262,27 @@ Updated section titles and headers from YOLO11n performance benchmarks to LionGa
 
 Adjusted internal model architecture reference labels to LionGazeV1 Fused.
 
+File "/mount/src/liongaze/app.py", line 7
+
+Are you looking into international innovation competitions, such as preparing materials or tailoring your pitch for the 5th China-Africa Youth Innovation and Entrepreneurship Competition, exploring tech incubation opportunities, or looking up hardware manufacturing and component sourcing in China for the project?
+
+^
+
+SyntaxError: invalid decimal literal
+
+Your updated and fully corrected app.py file is ready
+
+PY icon
+app
+ PY 
+Why this error happened:
+The SyntaxError: invalid decimal literal occurs when raw natural language text (such as conversational sentences or prompt notes) is accidentally pasted directly into a Python script without being enclosed in string quotes or comment tags (#). Python tries to parse the words as numbers or decimals, resulting in a syntax failure.
+
+What was fixed:
+Re-generated a clean, self-contained app.py script containing all Streamlit dashboard components, secure authentication, and PowerPoint deck generation logic.
+
+Ensured all strings, markdown blocks, and CSS styles are properly formatted and quoted so the application compiles and runs smoothly.
+
 
 
 
@@ -9854,7 +9875,7 @@ else:
                         <b>01 / Crowdsourced Sensors</b><br><br>Transform existing delivery and public transport fleets into active diagnostic sensors capturing continuous road conditions without extra hardware overhead.
                     </div>
                     <div style="flex: 1; background: #0f172a; padding: 20px; border-radius: 8px; border-top: 4px solid #10b981;">
-                        <b>02 / Edge Pre-Processing</b><br><br>Utilize onboard edge computing to detect and classify road anomalies locally, filtering noise before transmitting lightweight, high-value data packets.
+                        <b>02 / Edge Pre-Processing</b><br><br>Test and utilize onboard edge computing to detect and classify road anomalies locally, filtering noise before transmitting lightweight, high-value data packets.
                     </div>
                     <div style="flex: 1; background: #0f172a; padding: 20px; border-radius: 8px; border-top: 4px solid #8b5cf6;">
                         <b>03 / Municipal Intelligence</b><br><br>Deliver real-time, high-precision geospatial maps and severity analytics directly to city planners for proactive infrastructure maintenance.
@@ -9906,5 +9927,5 @@ else:
         """,
             unsafe_allow_html=True,
         )
-liongaze_app.py
-Displaying liongaze_app.py.
+app.py
+Displaying app.py.
