@@ -75,7 +75,7 @@ col1, col2, col3 = st.columns(3)
 with col1:
   st.metric("Development Stage", "R&D / Working Prototype")
 with col2:
-  st.metric("Hardware Stack", "Raspberry Pi 4B + IMU")
+  st.metric("Core Vision Model", "YOLO11n (Fine-tuned)")
 with col3:
   st.metric("Target Market", "Logistics & Municipalities")
 
@@ -88,6 +88,34 @@ st.write(
     " municipalities with data-driven repair insights."
 )
 
+st.markdown("---")
+st.markdown("### 🤖 YOLO11n Model Performance & Benchmarks")
+
+# Benchmark metrics columns
+m1, m2, m3, m4 = st.columns(4)
+with m1:
+  st.metric("mAP50", "88.50%")
+with m2:
+  st.metric("mAP50-95", "47.51%")
+with m3:
+  st.metric("Precision", "93.13%")
+with m4:
+  st.metric("Recall", "80.08%")
+
+# Technical breakdown expander
+with st.expander("🛠️ View Detailed Training & Hardware Metrics"):
+  st.markdown("""
+    - **Environment & Hardware:** Ultralytics v8.4.171 | Python 3.13.15 | PyTorch 2.14.1+cu130 | NVIDIA Tesla T4 (14,913 MiB VRAM)
+    - **Model Architecture:** YOLO11n Fused (100 layers, 2,582,347 parameters, 6.4 GFLOPs)
+    - **Dataset Validation:** 92 test images, 251 instances evaluated.
+    - **Inference Speed Breakdown (per image):**
+      - Preprocess: `10.1 ms`
+      - Inference: `6.6 ms`
+      - Loss: `0.0 ms`
+      - Postprocess: `5.6 ms`
+    """)
+
+st.markdown("---")
 st.markdown("### 📊 Live System Status / Demo")
 st.info("System operational. Edge sensor node connected.")
 
