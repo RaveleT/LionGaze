@@ -1,5 +1,5 @@
 import os
-import streamlit as s
+import streamlit as st
 from pptx import Presentation
 from pptx.dml.color import RGBColor
 from pptx.enum.shapes import MSO_SHAPE
