@@ -121,7 +121,7 @@ if not check_password():
 
 
 # ==========================================
-# GENERATE PPTX ON THE FLY FOR DOWNLOAD
+# GENERATE PPTX OBJECT IN MEMORY (IF NEEDED) OR SKIP SAVING
 # ==========================================
 def generate_pptx_file():
     prs = Presentation()
@@ -435,8 +435,7 @@ def generate_pptx_file():
     prs.save(filename)
     return filename
 
-
-pptx_path = generate_pptx_file()
+generate_pptx_file()
 
 # ==========================================
 # MAIN PRODUCT PRESENTATION (Protected Area)
@@ -444,8 +443,7 @@ pptx_path = generate_pptx_file()
 
 st.title("🦁 LionGaze (狮视) — Product Presentation")
 st.subheader(
-    "AI-Powered Road-Mapping & Safety Device for Logistics and Municipal"
-    " Infrastructure"
+    "AI-Powered Road-Mapping & Safety Device for Logistics and Municipal Infrastructure"
 )
 
 st.markdown("---")
@@ -505,26 +503,14 @@ if view_mode == "📊 Dashboard & Metrics":
 
     if st.button("Run Simulation Check"):
         st.success(
-            "Pothole cluster detected at GPS [-23.0021, 30.4485]. Fleet broadcast"
-            " successful."
+            "Pothole cluster detected at GPS [-23.0021, 30.4485]. Fleet broadcast successful."
         )
 
 else:
     st.markdown("### 🖥️ Interactive Slide Deck Viewer")
     st.write(
-        "Browse through the rendered slide cards of your pitch deck below, and"
-        " download the complete editable PowerPoint presentation."
+        "Browse through the rendered slide cards of your pitch deck below."
     )
-
-    with open(pptx_path, "rb") as f:
-        st.download_button(
-            label="📥 Download PowerPoint Presentation (.pptx)",
-            data=f,
-            file_name="LionGaze_Saucy_Pitch_Deck-v3.pptx",
-            mime=(
-                "application/vnd.openxmlformats-officedocument.presentationml.presentation"
-            ),
-        )
 
     st.markdown("---")
 
